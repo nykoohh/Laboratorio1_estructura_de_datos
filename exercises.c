@@ -49,7 +49,7 @@ List* crea_lista()
    {
       int *num = malloc(sizeof(int));
       *num = i;
-      pushback(ListaNum, num);
+      pushBack(ListaNum, num);
    }
    
    return ListaNum;
