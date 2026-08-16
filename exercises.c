@@ -139,9 +139,9 @@ int parentesisBalanceados(char *cadena)
    Stack *pilaParentesis = create_stack();
    int i = 0;
 
-   while (cadena(i) != NULL)
+   while (cadena[i] != NULL)
    {
-      void *parentesis = cadena(i));
+      void *parentesis = cadena[i]);
       if (parentesis == "(")
       {
          push(pilaParentesis, parentesis);
