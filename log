@@ -1004,3 +1004,16 @@ Sun Aug 16 04:31:48 AM UTC 2026:
  tests:  4|1
 total_score: 50/70
 86a230f
+Sun Aug 16 04:32:59 AM UTC 2026: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:153:35: error: called object ‘topp’ is not a function or function pointer
+  153 |          if (parentesis == ')' && topp(pilaParentesis) == '(')
+      |                                   ^~~~
+exercises.c:152:16: note: declared here
+  152 |          char *topp = top(pilaParentesis);
+      |                ^~~~
+58592ac
