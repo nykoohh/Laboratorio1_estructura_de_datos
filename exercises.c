@@ -151,9 +151,10 @@ int parentesisBalanceados(char *cadena)
          if (parentesis == ')')
          {
             if (top(pilaParentesis) == NULL)
-               {
-                  return 0;
-               }
+            {
+               free_stack(pilaParentesis);
+               return 0;
+            }
             pop(pilaParentesis);
          }
       }
@@ -162,10 +163,11 @@ int parentesisBalanceados(char *cadena)
 
    if (top(pilaParentesis) == NULL)
    {
+      free_stack(pilaParentesis);
       return 1;
    }
    
-   
+   free_stack(pilaParentesis);
    return 0;
 }
 
