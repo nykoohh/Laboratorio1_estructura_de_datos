@@ -789,3 +789,19 @@ stack.h:11:31: note: expected ‘void *’ but argument is of type ‘char’
    11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
       |                         ~~~~~~^~~~
 18b295a
+Sun Aug 16 03:33:47 AM UTC 2026: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:147:31: error: passing argument 2 of ‘push’ makes pointer from integer without a cast [-Wint-conversion]
+  147 |          push(pilaParentesis, parentesis);
+      |                               ^~~~~~~~~~
+      |                               |
+      |                               char
+In file included from exercises.c:7:
+stack.h:11:31: note: expected ‘void *’ but argument is of type ‘char’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |                         ~~~~~~^~~~
+d9294af
