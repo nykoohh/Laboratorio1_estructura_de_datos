@@ -1044,3 +1044,17 @@ Sun Aug 16 04:35:30 AM UTC 2026:
  tests:  6|1
 total_score: 60/70
 0a4c8d9
+Sun Aug 16 04:36:56 AM UTC 2026: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:153:32: error: suggest parentheses around ‘&&’ within ‘||’ [-Werror=parentheses]
+  153 |          if (parentesis == ')' && topp == '(' || parentesis == '}' && topp == '{' || parentesis == ']' && topp == '[')
+      |              ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+exercises.c:153:104: error: suggest parentheses around ‘&&’ within ‘||’ [-Werror=parentheses]
+  153 |          if (parentesis == ')' && topp == '(' || parentesis == '}' && topp == '{' || parentesis == ']' && topp == '[')
+      |                                                                                      ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+47b2f08
