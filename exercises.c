@@ -152,7 +152,6 @@ int parentesisBalanceados(char *cadena)
          {
             if (top(pilaParentesis) == NULL)
                {
-                  free_stack(pilaParentesis);
                   return 0;
                }
             pop(pilaParentesis);
