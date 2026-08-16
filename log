@@ -672,3 +672,13 @@ Sun Aug 16 03:15:55 AM UTC 2026:
  tests:  4|1
 total_score: 50/70
 c00c117
+Sun Aug 16 03:26:51 AM UTC 2026: 
+ exercises.c | 25 ++++++++++++++++++++++++-
+ 1 file changed, 24 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:141:4: error: expected ‘,’ or ‘;’ before ‘while’
+  141 |    while (top(cadena) != NULL)
+      |    ^~~~~
+ad07b55
