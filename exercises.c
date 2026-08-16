@@ -153,6 +153,11 @@ int parentesisBalanceados(char *cadena)
       }
       i++;
    }
+
+   if (top(pilaParentesis) == NULL)
+   {
+      return 1;
+   }
    
    return 0;
 }
