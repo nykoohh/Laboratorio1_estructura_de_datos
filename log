@@ -821,3 +821,23 @@ stack.h:11:31: note: expected ‘void *’ but argument is of type ‘char’
    11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
       |                         ~~~~~~^~~~
 7b8e137
+Sun Aug 16 03:39:33 AM UTC 2026: 
+ exercises.c | 5 +++++
+ 1 file changed, 5 insertions(+)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:147:31: error: passing argument 2 of ‘push’ makes pointer from integer without a cast [-Wint-conversion]
+  147 |          push(pilaParentesis, parentesis);
+      |                               ^~~~~~~~~~
+      |                               |
+      |                               char
+In file included from exercises.c:7:
+stack.h:11:31: note: expected ‘void *’ but argument is of type ‘char’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |                         ~~~~~~^~~~
+exercises.c:155:19: error: implicit declaration of function ‘free_stack’; did you mean ‘create_stack’? [-Wimplicit-function-declaration]
+  155 |                   free_stack(pilaParentesis);
+      |                   ^~~~~~~~~~
+      |                   create_stack
+cba3e98
