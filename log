@@ -963,3 +963,13 @@ exercises.c:152:15: note: declared here
   152 |          char top = top(pilaParentesis);
       |               ^~~
 f43fc55
+Sun Aug 16 04:29:17 AM UTC 2026: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:152:22: error: initialization of ‘char’ from ‘void *’ makes integer from pointer without a cast [-Wint-conversion]
+  152 |          char topp = top(pilaParentesis);
+      |                      ^~~
+b56f2c5
