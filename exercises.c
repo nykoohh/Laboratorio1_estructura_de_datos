@@ -120,6 +120,7 @@ void copia_pila(Stack* P1, Stack* P2)
    {
       void* dato2 = top(pilaAux);
       push(P2, dato2);
+      push(P1, dato2);
       pop(pilaAux);
    }
    
