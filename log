@@ -973,3 +973,17 @@ exercises.c:152:22: error: initialization of ‘char’ from ‘void *’ makes 
   152 |          char topp = top(pilaParentesis);
       |                      ^~~
 b56f2c5
+Sun Aug 16 04:29:39 AM UTC 2026: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:152:22: error: dereferencing ‘void *’ pointer [-Werror]
+  152 |          char topp = *top(pilaParentesis);
+      |                      ^~~~~~~~~~~~~~~~~~~~
+exercises.c:152:22: error: void value not ignored as it ought to be
+  152 |          char topp = *top(pilaParentesis);
+      |                      ^
+cc1: all warnings being treated as errors
+9198525
