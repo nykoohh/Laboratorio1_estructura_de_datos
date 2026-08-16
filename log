@@ -950,3 +950,16 @@ exercises.c:153:32: error: expected statement before ‘)’ token
   153 |          if (parentesis == top))
       |                                ^
 41ea12d
+Sun Aug 16 04:27:53 AM UTC 2026: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:152:21: error: called object ‘top’ is not a function or function pointer
+  152 |          char top = top(pilaParentesis);
+      |                     ^~~
+exercises.c:152:15: note: declared here
+  152 |          char top = top(pilaParentesis);
+      |               ^~~
+f43fc55
