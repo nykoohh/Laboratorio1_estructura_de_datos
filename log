@@ -277,3 +277,87 @@ Sun Aug 16 02:55:34 AM UTC 2026:
  tests:  3|2
 total_score: 40/70
 94a362e
+Sun Aug 16 03:04:42 AM UTC 2026: 
+ exercises.c | 23 ++++++++++++++++++++++-
+ 1 file changed, 22 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘copia_pila’:
+exercises.c:109:4: error: unknown type name ‘stack’; did you mean ‘Stack’?
+  109 |    stack *pilaAux = CreateStack();
+      |    ^~~~~
+      |    Stack
+exercises.c:109:21: error: implicit declaration of function ‘CreateStack’; did you mean ‘create_stack’? [-Wimplicit-function-declaration]
+  109 |    stack *pilaAux = CreateStack();
+      |                     ^~~~~~~~~~~
+      |                     create_stack
+exercises.c:109:21: error: initialization of ‘int *’ from ‘int’ makes pointer from integer without a cast [-Wint-conversion]
+exercises.c:110:15: error: initialization of ‘int’ from ‘void *’ makes integer from pointer without a cast [-Wint-conversion]
+  110 |    int dato = top(P1);
+      |               ^~~
+exercises.c:112:15: error: comparison between pointer and integer [-Werror]
+  112 |    while(dato != NULL)
+      |               ^~
+exercises.c:114:12: error: assignment to ‘int’ from ‘void *’ makes integer from pointer without a cast [-Wint-conversion]
+  114 |       dato = top(P1);
+      |            ^
+exercises.c:115:12: error: passing argument 1 of ‘push’ from incompatible pointer type [-Wincompatible-pointer-types]
+  115 |       push(pilaAux, dato);
+      |            ^~~~~~~
+      |            |
+      |            int *
+In file included from exercises.c:7:
+stack.h:11:18: note: expected ‘Stack *’ {aka ‘List *’} but argument is of type ‘int *’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |           ~~~~~~~^~~~~
+exercises.c:115:21: error: passing argument 2 of ‘push’ makes pointer from integer without a cast [-Wint-conversion]
+  115 |       push(pilaAux, dato);
+      |                     ^~~~
+      |                     |
+      |                     int
+stack.h:11:31: note: expected ‘void *’ but argument is of type ‘int’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |                         ~~~~~~^~~~
+exercises.c:119:20: error: passing argument 1 of ‘top’ from incompatible pointer type [-Wincompatible-pointer-types]
+  119 |    int dato2 = top(pilaAux);
+      |                    ^~~~~~~
+      |                    |
+      |                    int *
+stack.h:14:18: note: expected ‘Stack *’ {aka ‘List *’} but argument is of type ‘int *’
+   14 | void *top(Stack *stack) { return first(stack); }
+      |           ~~~~~~~^~~~~
+exercises.c:119:16: error: initialization of ‘int’ from ‘void *’ makes integer from pointer without a cast [-Wint-conversion]
+  119 |    int dato2 = top(pilaAux);
+      |                ^~~
+exercises.c:121:16: error: comparison between pointer and integer [-Werror]
+  121 |    while(dato2 != NULL)
+      |                ^~
+exercises.c:123:19: error: passing argument 1 of ‘top’ from incompatible pointer type [-Wincompatible-pointer-types]
+  123 |       dato2 = top(pilaAux);
+      |                   ^~~~~~~
+      |                   |
+      |                   int *
+stack.h:14:18: note: expected ‘Stack *’ {aka ‘List *’} but argument is of type ‘int *’
+   14 | void *top(Stack *stack) { return first(stack); }
+      |           ~~~~~~~^~~~~
+exercises.c:123:13: error: assignment to ‘int’ from ‘void *’ makes integer from pointer without a cast [-Wint-conversion]
+  123 |       dato2 = top(pilaAux);
+      |             ^
+exercises.c:124:16: error: passing argument 2 of ‘push’ makes pointer from integer without a cast [-Wint-conversion]
+  124 |       push(P2, dato2);
+      |                ^~~~~
+      |                |
+      |                int
+stack.h:11:31: note: expected ‘void *’ but argument is of type ‘int’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |                         ~~~~~~^~~~
+exercises.c:125:11: error: passing argument 1 of ‘pop’ from incompatible pointer type [-Wincompatible-pointer-types]
+  125 |       pop(pilaAux);
+      |           ^~~~~~~
+      |           |
+      |           int *
+stack.h:17:18: note: expected ‘Stack *’ {aka ‘List *’} but argument is of type ‘int *’
+   17 | void *pop(Stack *stack) { return popFront(stack); }
+      |           ~~~~~~~^~~~~
+cc1: all warnings being treated as errors
+104f943
