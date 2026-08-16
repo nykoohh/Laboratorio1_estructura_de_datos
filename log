@@ -82,3 +82,22 @@ exercises.c:63:21: note: declared here
    63 | int sumaLista(List *L)
       |               ~~~~~~^
 6fa1c55
+Sun Aug 16 02:39:57 AM UTC 2026: 
+ exercises.c | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:67:15: error: initialization of ‘int’ from ‘void *’ makes integer from pointer without a cast [-Wint-conversion]
+   67 |    int dato = first(L);
+      |               ^~~~~
+exercises.c:69:10: error: called object ‘L’ is not a function or function pointer
+   69 |    while(L(i) != NULL)
+      |          ^
+exercises.c:63:21: note: declared here
+   63 | int sumaLista(List *L)
+      |               ~~~~~~^
+exercises.c:72:12: error: assignment to ‘int’ from ‘void *’ makes integer from pointer without a cast [-Wint-conversion]
+   72 |       dato = next(L);
+      |            ^
+bc7b7ea

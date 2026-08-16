@@ -64,10 +64,13 @@ int sumaLista(List *L)
 {
    int i = 0;
    int suma = 0;
+   int dato = first(L);
 
    while(L(i) != NULL)
    {
-      suma += L(i);
+      suma += dato;
+      dato = next(L);
+      
    }
    
    return suma;
