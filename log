@@ -721,3 +721,32 @@ stack.h:17:18: note: expected ‘Stack *’ {aka ‘List *’} but argument is o
       |           ~~~~~~~^~~~~
 cc1: all warnings being treated as errors
 44cbc91
+Sun Aug 16 03:28:20 AM UTC 2026: 
+ exercises.c | 7 ++++---
+ 1 file changed, 4 insertions(+), 3 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:142:11: error: called object ‘cadena’ is not a function or function pointer
+  142 |    while (cadena(i) != NULL)
+      |           ^~~~~~
+exercises.c:137:33: note: declared here
+  137 | int parentesisBalanceados(char *cadena)
+      |                           ~~~~~~^~~~~~
+exercises.c:144:26: error: called object ‘cadena’ is not a function or function pointer
+  144 |       void *parentesis = cadena(i));
+      |                          ^~~~~~
+exercises.c:137:33: note: declared here
+  137 | int parentesisBalanceados(char *cadena)
+      |                           ~~~~~~^~~~~~
+exercises.c:144:35: error: expected ‘,’ or ‘;’ before ‘)’ token
+  144 |       void *parentesis = cadena(i));
+      |                                   ^
+exercises.c:145:22: error: comparison with string literal results in unspecified behavior [-Werror=address]
+  145 |       if (parentesis == "(")
+      |                      ^~
+exercises.c:149:21: error: comparison with string literal results in unspecified behavior [-Werror=address]
+  149 |       if(parentesis == ")")
+      |                     ^~
+cc1: all warnings being treated as errors
+c94008c
