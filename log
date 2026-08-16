@@ -1038,3 +1038,9 @@ exercises.c:152:22: error: initialization of ‘char’ from ‘void *’ makes 
   152 |          char topp = top(pilaParentesis);
       |                      ^~~
 c46bc8a
+Sun Aug 16 04:35:30 AM UTC 2026: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  6|1
+total_score: 60/70
+0a4c8d9
