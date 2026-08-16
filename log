@@ -121,3 +121,17 @@ exercises.c:65:8: error: unused variable ‘i’ [-Werror=unused-variable]
       |        ^
 cc1: all warnings being treated as errors
 1512a44
+Sun Aug 16 02:41:25 AM UTC 2026: 
+ exercises.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:72:13: error: assignment to ‘int’ from ‘void *’ makes integer from pointer without a cast [-Wint-conversion]
+   72 |       *dato = next(L);
+      |             ^
+exercises.c:65:8: error: unused variable ‘i’ [-Werror=unused-variable]
+   65 |    int i = 0;
+      |        ^
+cc1: all warnings being treated as errors
+a5c45ea
