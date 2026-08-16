@@ -682,3 +682,42 @@ exercises.c:141:4: error: expected ‘,’ or ‘;’ before ‘while’
   141 |    while (top(cadena) != NULL)
       |    ^~~~~
 ad07b55
+Sun Aug 16 03:27:02 AM UTC 2026: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:141:15: error: passing argument 1 of ‘top’ from incompatible pointer type [-Wincompatible-pointer-types]
+  141 |    while (top(cadena) != NULL)
+      |               ^~~~~~
+      |               |
+      |               char *
+In file included from exercises.c:7:
+stack.h:14:18: note: expected ‘Stack *’ {aka ‘List *’} but argument is of type ‘char *’
+   14 | void *top(Stack *stack) { return first(stack); }
+      |           ~~~~~~~^~~~~
+exercises.c:143:30: error: passing argument 1 of ‘top’ from incompatible pointer type [-Wincompatible-pointer-types]
+  143 |       void *parentesis = top(cadena);
+      |                              ^~~~~~
+      |                              |
+      |                              char *
+stack.h:14:18: note: expected ‘Stack *’ {aka ‘List *’} but argument is of type ‘char *’
+   14 | void *top(Stack *stack) { return first(stack); }
+      |           ~~~~~~~^~~~~
+exercises.c:144:22: error: comparison with string literal results in unspecified behavior [-Werror=address]
+  144 |       if (parentesis == "(")
+      |                      ^~
+exercises.c:148:21: error: comparison with string literal results in unspecified behavior [-Werror=address]
+  148 |       if(parentesis == ")")
+      |                     ^~
+exercises.c:152:11: error: passing argument 1 of ‘pop’ from incompatible pointer type [-Wincompatible-pointer-types]
+  152 |       pop(cadena);
+      |           ^~~~~~
+      |           |
+      |           char *
+stack.h:17:18: note: expected ‘Stack *’ {aka ‘List *’} but argument is of type ‘char *’
+   17 | void *pop(Stack *stack) { return popFront(stack); }
+      |           ~~~~~~~^~~~~
+cc1: all warnings being treated as errors
+44cbc91
