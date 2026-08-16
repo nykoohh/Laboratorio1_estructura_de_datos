@@ -644,3 +644,19 @@ stack.h:11:31: note: expected ‘void *’ but argument is of type ‘int’
       |                         ~~~~~~^~~~
 cc1: all warnings being treated as errors
 2b09af1
+Sun Aug 16 03:14:52 AM UTC 2026: 
+ exercises.c | 14 ++++++--------
+ 1 file changed, 6 insertions(+), 8 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘copia_pila’:
+exercises.c:122:16: error: ‘dato’ undeclared (first use in this function); did you mean ‘dato2’?
+  122 |       push(P2, dato);
+      |                ^~~~
+      |                dato2
+exercises.c:122:16: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c:121:13: error: unused variable ‘dato2’ [-Werror=unused-variable]
+  121 |       void* dato2 = top(pilaAux);
+      |             ^~~~~
+cc1: all warnings being treated as errors
+1ff801c
