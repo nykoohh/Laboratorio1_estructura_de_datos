@@ -44,3 +44,22 @@ exercises.c:63:21: note: declared here
    63 | int sumaLista(List *L)
       |               ~~~~~~^
 eb27f6e
+Sun Aug 16 02:35:24 AM UTC 2026: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:68:11: error: called object ‘L’ is not a function or function pointer
+   68 |    while(*L(i) != NULL)
+      |           ^
+exercises.c:63:21: note: declared here
+   63 | int sumaLista(List *L)
+      |               ~~~~~~^
+exercises.c:70:16: error: called object ‘L’ is not a function or function pointer
+   70 |       suma += *L(i);
+      |                ^
+exercises.c:63:21: note: declared here
+   63 | int sumaLista(List *L)
+      |               ~~~~~~^
+e21f4da
