@@ -987,3 +987,14 @@ exercises.c:152:22: error: void value not ignored as it ought to be
       |                      ^
 cc1: all warnings being treated as errors
 9198525
+Sun Aug 16 04:30:19 AM UTC 2026: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:153:25: error: comparison between pointer and integer [-Werror]
+  153 |          if (parentesis == topp)
+      |                         ^~
+cc1: all warnings being treated as errors
+3f7932a
