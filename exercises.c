@@ -150,7 +150,7 @@ int parentesisBalanceados(char *cadena)
       if (parentesis == ')' || parentesis == '}' || parentesis == ']')
       {
          char *topp = top(pilaParentesis);
-         if (parentesis == topp)
+         if (parentesis == *(char*)topp)
          {
             pop(pilaParentesis);
          }
