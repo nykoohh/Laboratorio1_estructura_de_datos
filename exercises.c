@@ -146,12 +146,9 @@ int parentesisBalanceados(char *cadena)
       {
          push(pilaParentesis, &cadena[i]);
       }
-      else
+      if (parentesis == ')'  || parentesis == '}' || parentesis == ']')
       {
-         if (parentesis == ')' || parentesis == '}' || parentesis == ']')
-         {
-            pop(pilaParentesis);
-         }
+         pop(pilaParentesis);
       }
       i++;
    }
