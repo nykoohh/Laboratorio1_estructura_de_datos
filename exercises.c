@@ -62,7 +62,6 @@ retorne la suma de sus elementos.
 */
 int sumaLista(List *L) 
 {
-   int i = 0;
    int suma = 0;
    int* dato = first(L);
 
